@@ -119,7 +119,7 @@ const PlacesForm = () => {
       console.log(id);
       const method = id != "new" ? "PUT" : "POST";
       console.log(method);
-      await fetch(url + "/place/new", {
+      const res = await fetch(url + "/place/new", {
         method: method,
         body: JSON.stringify(data),
         headers: {
@@ -127,6 +127,10 @@ const PlacesForm = () => {
           "Content-Type": "application/json",
         },
       });
+      if (res.status === 401) {
+        alert("Fill all details");
+        return;
+      }
       navigate("/account/places");
     } catch (e) {
       console.log("error uploading property");
@@ -146,6 +150,7 @@ const PlacesForm = () => {
             setdescription,
             price,
             setprice,
+            type,
           }}
         />
         <PhotoByLink

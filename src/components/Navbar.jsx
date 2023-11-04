@@ -52,7 +52,7 @@ const Navbar = () => {
               }}
             >
               <Typography variant="body" color="initial">
-                HomeAway your home
+                AWAY FROM YOUR HOME
               </Typography>
             </Button>
           </NavLink>

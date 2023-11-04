@@ -26,7 +26,7 @@ const PhotoByLink = ({
           label="Photo"
           multiple
           value={photoLink}
-          helperText="Add photos of your property"
+          helperText="Add photos of your property (minimum:3)"
           placeholder="Add photo using link...jpg"
           sx={{
             width: {
